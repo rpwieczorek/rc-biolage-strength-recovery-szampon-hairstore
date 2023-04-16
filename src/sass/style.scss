@@ -133,6 +133,7 @@ body {
       &--wrapper {
         width: 100%;
         display: flex;
+        gap: 10px;
         justify-content: space-around;
         padding: 0 25px 0 50px;
 
@@ -403,7 +404,7 @@ body {
     }
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 815px) {
   .es-kv {
     &__photo {
       display: block !important;
