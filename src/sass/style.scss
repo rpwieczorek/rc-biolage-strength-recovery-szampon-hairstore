@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+$regular: 'Roboto', sans-serif;
+$orange: #f08700;
+$blue: #009ee3;
+$dark-green: #7b8e6b;
+$light-green: #dce2ce;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@mixin text {
+  margin: 0;
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+@mixin img {
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes slideright {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideleft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#es-biolage.es-biolage {
+  font-family: $regular;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 1.2;
+  max-width: 998px;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+  background: #fff;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: $regular;
+    color: #000;
+  }
+
+  .es-kv {
+    background-color: $light-green;
+    position: relative;
+    width:100%;
+    &__wrapper {
+      position: relative;
+      overflow: hidden;
+      // height:500px;
+    }
+    &__logo {
+      @include img;
+      max-width: 220px;
+      margin: 20px 40px;
+    }
+    &__photo {
+      display: none;
+    }
+    &__main {
+      background-color: $dark-green;
+    }
+    &__title {
+      @include text;
+      width: 100%;
+      color: #fff;
+      font-weight: 300;
+      font-size: 22px;
+      padding: 15px 15px 15px 40px;
+      text-align: left;
+      & span {
+        font-size: 28px;
+      }
+    }
+    &__text {
+      @include text;
+      width: 100%;
+      color: #fff;
+      font-weight: 200;
+      font-size: 16px;
+      padding: 0 25px 25px 40px;
+      text-align: left;
+    }
+    &__efects {
+      &--title {
+        @include text;
+        color: $dark-green;
+        font-weight: 500;
+        
+        font-size: 22px;
+        padding: 15px 15px 15px 40px;
+        text-align: left;
+      }
+      &--wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        padding: 0 25px 0 50px;
+
+      }
+      &--single {
+        width: 130px;
+
+      }
+      &--item {
+        @include img;
+        margin: 0;
+        max-width: 80px;
+      }
+      &--desc {
+        @include text;
+        color: $dark-green;
+        font-weight: 300;
+        font-size: 12px;
+        text-align: left;
+        padding: 5px 0 20px 0;
+      }
+    }
+    &__packhshot {
+      position: relative;
+    }
+    &__image {
+      @include img;
+      max-height: 350px;
+      padding: 20px 20px 0;
+    }
+  }
+  .es-ingredients {
+    &__wrapper {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &__left {
+      width: 100%;
+      padding: 20px 20px;
+    }
+    &__right {
+      width: 100%;
+    }
+    &__image {
+      @include img;
+    }
+    &__title {
+      @include text;
+      color: $dark-green;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__subtitle {
+      @include text;
+      color: $dark-green;
+      font-size: 15px;
+      font-weight: 700;
+      padding-bottom: 15px;
+    }
+    &__text {
+      @include text;
+      color: $dark-green;
+      font-size: 15px;
+      padding-bottom: 5px;
+      font-weight: 300;
+    }
+  }
+  .es-why{
+    &__tile {
+      width: 100%;
+      padding: 15px 10px 0;
+    }
+    &__container {
+      display: flex;
+      justify-content: space-around;
+      gap: 10px;
+    }
+    &__single {
+      width: 120px;
+    }
+    &__item {
+      @include img;
+      max-width: 80px;
+    }
+    &__desc {
+      @include text;
+      font-size: 11px;
+      text-align: left;
+      color: $dark-green;
+      padding-top: 10px;
+    }
+  }
+  .es-use {
+    background-color: $light-green;
+    padding: 25px;
+    &__title {
+      @include text;
+      color: $dark-green;
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 25px;
+    }
+    &__text {
+      @include text;
+      color: $dark-green;
+      font-size: 15px;
+      padding-bottom: 5px;
+      font-weight: 300;
+    }
+  }
+  .es-ba {
+    &__wrapper {
+      width: 100%;
+      display: flex;
+    }
+    &__image {
+      @include img;
+    }
+    &__tile {
+      width: 50%;
+    }
+    &__desc {
+      background-color: $dark-green;
+      @include text;
+      width: 100%;
+      font-size: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+      padding: 10px 20px;
+      color: #fff;
+    }
+  }
+  .es-cross {
+    background-color: $light-green;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__title {
+      @include text;
+      margin: 0;
+      color: $dark-green;
+      font-weight: 700;
+      font-size: 22px;
+      text-transform: uppercase;
+      padding: 40px 25px 25px;
+      text-align: left;
+    }
+
+    &__itemsCnt {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: 300px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+
+    }
+
+    &__itemImgCnt {
+      position: relative;
+      margin: 0 0 0 auto;
+      max-width: 130px;
+      // top: 10px;
+      transition: ease-in-out 0.3s;
+      &:hover {
+        filter: contrast(105%);
+        transform: scale(1.1);
+      }
+    }
+
+    &__number {
+      @include text;
+      position: absolute;
+      color: $dark-green;
+      top: -80px;
+      left:0;
+      font-size: 400px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__desc {
+      @include text;
+      position: absolute;
+      color: $dark-green;
+      top: 330px;
+      left: 20px;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    &__itemTitle {
+      @include text;
+      color: $dark-green;
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    &__itemButton {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 300;
+      background-color: black;
+      width: 85%;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 14px;
+      border-radius: 5px;
+
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        box-shadow: 0 0.5em 0.5em -0.4em #222;
+        transform: translateY(-0.25em);
+        filter: contrast(200%);
+      }
+
+      @media screen and (max-width: 900px) {
+        width: 75%;
+      }
+    }
+
+    &__footer {
+      @include text;
+      font-size: 9px;
+      text-align: center;
+      margin: 30px 0;
+      color: $dark-green;
+    }
+  }
+}
+
+@media screen and (min-width: 650px) {
+  .es-ingredients {
+    &__wrapper {
+      flex-wrap: nowrap !important;
+    }
+    &__left {
+      width: 50% !important;
+    }
+    &__right {
+      width: 50% !important;
+      height: 492px;
+      overflow: hidden;
+    }
+    &__image {
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+    }
+  }
+}
+@media screen and (min-width: 800px) {
+  .es-kv {
+    &__photo {
+      display: block !important;
+      position: absolute;
+      width: 300px;
+      top:0;
+      right: 0;
+      z-index: 0;
+    }
+    &__packshot {
+      position: absolute;
+      width: 100px;
+      top: 60px;
+      right: 250px;
+      z-index: 1;
+    }
+    &__image {
+      max-height: 450px !important;
+      padding: 0 !important;
+    }
+    &__title {
+      width: 60% !important;
+  
+    }
+    &__text {
+      width: 60% !important;
+    }
+    &__efects {
+  
+      &--wrapper {
+        width: 60% !important;
+  
+      }
+  
+    }
+  }
+  
+}
+@media screen and (min-width: 900px) {
+  .es-kv {
+    &__title {
+      width: 65% !important;
+  
+    }
+    &__text {
+      width: 65% !important;
+    }
+    &__efects {
+  
+      &--wrapper {
+        width: 65% !important;
+  
+      }
+  
+    }
+  }
+  
+}
